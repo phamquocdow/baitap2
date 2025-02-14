@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giới thiệu</title>
+  <link rel="stylesheet" href="h.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="blurred-box">
+  <div class="user-login-box">
+    <span class="user-icon"></span>
+    <div class="user-name">Phạm Quốc Hùng</div>
+  </div>
+
+</div>
+<div class = "hi">
+  <button id="temp1" class="btn">
+    <span class="muiten">⚡</span>
+    <p>1. Họ và tên</p>
+  </button>
+  <div id="temp2" class="hidden">
+    <p><b>Họ tên đầy đủ</b>: Phạm Quốc Hùng</p>
+    <p><b>Biệt danh</b>: Đơ, Giòi, Bờm, ...</p>
+  </div>
+  <button id="temp3" class="btn">
+    <span class="muiten">⚡</span>
+    <p>2. Giới thiệu về Hùng</p>
+  </button>
+  <div id="temp4" class="hidden">
+    <p><b>Quê quán</b>: thị trấn Na Hang, Na Hang, Tuyên Quang</p>
+    <p><b>Nơi sinh</b>: thị trấn Vị Xuyên, Vị Xuyên, Hà Giang</p>
+  </div>
+</div>
+<button id="toggleBtn" class="keora">></button>
+<div id="overlay" class="overlay"></div>
+<div id="slider" class="slider">
+  <img class = "anh" src="Screenshot%202025-02-14%20155319.png" alt="">
+</div>
+<script>
+  let temp1 = document.getElementById("temp1");
+  let temp2 = document.getElementById("temp2");
+  let temp3 = document.getElementById("temp3");
+  let temp4 = document.getElementById("temp4");
+  temp1.addEventListener("click", function () {
+    this.classList.toggle("active");
+    temp2.classList.toggle("show");
+  });
+  temp3.addEventListener("click", function () {
+    this.classList.toggle("active");
+    temp4.classList.toggle("show");
+  });
+
+  let toggleBtn = document.getElementById("toggleBtn");
+  let slider = document.getElementById("slider");
+  let overlay = document.getElementById("overlay");
+  toggleBtn.addEventListener("click", function () {
+    slider.classList.toggle("slided");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", function () {
+    slider.classList.remove("slided");
+    overlay.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>
